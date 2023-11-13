@@ -12,7 +12,7 @@
     "contract": "Full Time",
     "location": "USA Only",
     "languages": ["HTML", "CSS", "JavaScript"],
-    "tools": []
+    "tools": [""]
   },
   {
     "id": 2,
@@ -57,7 +57,7 @@
     "contract": "Contract",
     "location": "USA Only",
     "languages": ["CSS", "JavaScript"],
-    "tools": []
+    "tools": [""]
   },
   {
     "id": 5,
