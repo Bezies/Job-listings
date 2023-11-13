@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { nanoid } from "nanoid";
+import myData from "/data/data.json";
 
 const initialState = {
   jobData: undefined,
@@ -79,7 +80,7 @@ export const job = createSlice({
 
 export function getJobList(action) {
   return function (dispatch, getState) {
-    fetch("data/data.json")
+    fetch(`${myData}`)
       .then((res) => res.json())
       .then((data) => dispatch(addJob(data)));
   };
