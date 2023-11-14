@@ -78,7 +78,7 @@ export default function JobSearch() {
           {jobList.ToolsFilters.length > 0 &&
             jobList.ToolsFilters.map((tool) => (
               <div
-                className="rounded bg-aqua-haze-50 flex items-center"
+                className="rounded bg-aqua-haze-50 flex items-center ml-3"
                 key={nanoid(4)}
               >
                 <span className="font-bold text-breaker-bay-400 ml-3 bg-aqua-haze-50 px-2 text-sm">

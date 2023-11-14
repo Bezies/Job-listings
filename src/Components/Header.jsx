@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 export default function Header() {
   // FUNCTION FOR CHANGE HEADER BACKGROUND
-  const [screenSize, setScreenSize] = useState("");
+  const [screenSize, setScreenSize] = useState(getCurrentDimension());
 
   function getCurrentDimension() {
     return window.innerWidth;
@@ -19,8 +19,6 @@ export default function Header() {
       window.removeEventListener("resize", updateDimension);
     };
   });
-
-  console.log(screenSize);
 
   return (
     <div className="w-full bg-breaker-bay-400">

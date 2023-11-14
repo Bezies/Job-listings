@@ -15,6 +15,7 @@ export default function JobsCard() {
     dispatch(getJobList());
   }
 
+  console.log(jobList.LanguageFilters);
   return (
     <ul className="pt-10">
       {jobList.jobData &&
@@ -26,6 +27,7 @@ export default function JobsCard() {
           .filter((item) =>
             item.level.includes(jobList.LevelFilters.map((el) => el.name))
           )
+
           .filter((item) =>
             item.languages.some((el) =>
               el.includes(jobList.LanguageFilters.map((el) => el.name))

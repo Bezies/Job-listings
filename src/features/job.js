@@ -79,7 +79,7 @@ export const job = createSlice({
 
 export function getJobList(action) {
   return function (dispatch, getState) {
-    fetch("http://localhost:5178/data/data.json")
+    fetch("src/data/data.json")
       .then((res) => res.json())
       .then((data) => dispatch(addJob(data)));
   };
