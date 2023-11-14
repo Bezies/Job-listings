@@ -15,7 +15,6 @@ export default function JobsCard() {
     dispatch(getJobList());
   }
 
-  console.log(jobList.LanguageFilters);
   return (
     <ul className="pt-10">
       {jobList.jobData &&
