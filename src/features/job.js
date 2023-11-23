@@ -79,7 +79,7 @@ export const job = createSlice({
 
 export function getJobList(action) {
   return function (dispatch, getState) {
-    fetch("https://github.com/Bezies/Job-listings/blob/main/src/assets/data.json")
+    fetch("./assets/data.json")
       .then((res) => res.json())
       .then((data) => dispatch(addJob(data.jobs)));
   };
