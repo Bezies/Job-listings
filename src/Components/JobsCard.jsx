@@ -26,16 +26,13 @@ export default function JobsCard() {
           .filter((item) =>
             item.level.includes(jobList.LevelFilters.map((el) => el.name))
           )
-
           .filter((item) =>
-            item.languages.some((el) =>
-              el.includes(jobList.LanguageFilters.map((el) => el.name))
+            jobList.LanguageFilters.every((el) =>
+              item.languages.includes(el.name)
             )
           )
           .filter((item) =>
-            item.tools.some((el) =>
-              el.includes(jobList.ToolsFilters.map((el) => el.name))
-            )
+            jobList.ToolsFilters.every((el) => item.tools.includes(el.name))
           )
           .map((job) => (
             <li
